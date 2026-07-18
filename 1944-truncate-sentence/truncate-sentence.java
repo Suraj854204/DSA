@@ -1,13 +1,7 @@
 class Solution {
     public String truncateSentence(String s, int k) {
+        //using inbuilt function
         String[]word=s.split(" ");
-        StringBuilder sb=new StringBuilder();
-        for(int i=0;i<k;i++){
-            sb.append(word[i]);
-            if(i<k-1){
-                sb.append(" ");
-            }
-        }
-        return sb.toString();
+        return String.join(" ",Arrays.copyOfRange(word,0,k));
     }
 }
